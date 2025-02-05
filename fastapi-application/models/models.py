@@ -7,5 +7,9 @@ class Base(DeclarativeBase):
     id: Mapped[int] = mapped_column(primary_key=True)
 
     @declared_attr.directive
-    def __tabllename__(cls):
+    def __tablename__(cls):
         return f"{cls.__name__.lower()}s"
+
+
+class User(Base):
+    username: Mapped[str] = mapped_column(unique=True)
