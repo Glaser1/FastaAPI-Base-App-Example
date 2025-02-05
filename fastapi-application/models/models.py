@@ -18,7 +18,3 @@ class Base(DeclarativeBase):
 
 class User(Base):
     username: Mapped[str] = mapped_column(unique=True)
-    foo: Mapped[int]
-    bar: Mapped[int]
-
-    __table_args__ = (UniqueConstraint("foo", "bar"),)
