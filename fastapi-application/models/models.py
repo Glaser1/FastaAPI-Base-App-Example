@@ -1,5 +1,5 @@
 from sqlalchemy.orm import declared_attr, DeclarativeBase, Mapped, mapped_column
-from sqlalchemy import UniqueConstraint, MetaData
+from sqlalchemy import MetaData
 
 from config import settings
 
